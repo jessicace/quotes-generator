@@ -14,3 +14,13 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(document).ready(function() {
+  $('#getquote').click(function(e) {
+    $.get('/quotes', function(data) {
+      $('#output').html(data);
+    });
+    e.preventDefault();
+  });
+});
