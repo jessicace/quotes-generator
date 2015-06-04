@@ -17,8 +17,10 @@
 
 
 $(document).ready(function() {
-  $('#getquote').click(function(e) {
-    $.get('/quotes', function(data) {
+  $('.getquote').click(function(e) {
+    var url = $(this).attr('href');
+    console.log(url)
+    $.get(url, function(data) {
       $('#output').html(data);
     });
     e.preventDefault();
