@@ -3,5 +3,6 @@ class Quote < ActiveRecord::Base
   belongs_to :medium, polymorphic: true
   validates :content, :attribution, presence: true
 
-  scope :random, -> { self.all.order('RANDOM()').first }
+  scope :random, -> { order('RANDOM()').first }
+
 end
