@@ -1,6 +1,6 @@
 class QuotesController < ApplicationController
   def index
-    @random_quote = scope.random.content
+    @random_quote = scope.random
     render layout: false
   end
 
