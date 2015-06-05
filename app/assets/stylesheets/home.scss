@@ -18,13 +18,17 @@ $hero-image: url(hero.jpg);
   	}
 }
 
-.quote {
-  margin: 0 auto;
-}
-
 /* Typography */
 
-p {
-  font-family: 'Parisienne', cursive;
-  font-size: 54px;
+blockquote {
+		margin-left: 0;
+		border-left: none;
+		& p {
+				font-family: 'Parisienne', cursive;
+				font-size: 54px;
+		}
+		& p::before,
+		& p::after {
+				content: '"';
+		}
 }
