@@ -25,4 +25,8 @@ $(document).ready(function() {
     });
     e.preventDefault();
   });
+
+  $('#go_home').click(function(e) {
+    location.reload();
+  });
 });

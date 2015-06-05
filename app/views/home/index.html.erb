@@ -13,13 +13,13 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 col-xs-12">
-					<blockquote id="output">
-						<%= render @quote_of_day %>
-					</blockquote>
-	     </div>
-    </div>
-  </div>
+				<blockquote id="output">
+					<%= render @quote_of_day %>
+				</blockquote>
+			</div>
+		</div>
+	</div>
 </section>
 <%= render partial: 'category', collection: @categories %>
 <%= link_to "Random", quotes_url, class: 'getquote' %>
-
+<%= link_to "Origin", root_url, id: 'go_home' %>
