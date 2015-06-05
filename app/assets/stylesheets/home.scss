@@ -1,3 +1,30 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$hero-image: url(hero.jpg);
+
+/* Layout */
+
+.hero {
+  padding: 40px 0;
+  background-image: $hero-image;
+  background-size: cover;
+    h1 {
+      font-family: 'Caudex', serif;
+      font-size: 64px;
+  		color:#000000;
+      float: right;
+  	}
+}
+
+.quote {
+  margin: 0 auto;
+}
+
+/* Typography */
+
+p {
+  font-family: 'Parisienne', cursive;
+  font-size: 54px;
+}
