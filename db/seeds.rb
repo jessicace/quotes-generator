@@ -9,6 +9,9 @@ populate_categories(categories)
 film = Category.find_by(name: 'Film')
 literature = Category.find_by(name: 'Literature')
 business = Category.find_by(name: 'Business')
+love = Category.find_by(name: 'Love')
+war = Category.find_by(name: 'War')
+
 
 q = Quote.create!(content: "The social object of skilled investment should be to defeat the dark forces of time and ignorance which envelope our future.",
              date: Time.utc(1935),
@@ -35,7 +38,7 @@ q.categories << literature
 q.categories << business
 
 q = Quote.create!(content: "Our fruitless labours mourn, And only rich in barren fame return.",
-              date: Time.utc(1725), 
+              date: Time.utc(1725),
               attribution: "Homer",
               medium: Literature.new(title: "Odessey")
              )
@@ -64,14 +67,14 @@ q = Quote.create!(content: "Frankly, my dear, I don't give a damn.",
 q.categories << film
 
 q = Quote.create!(content: "I'm gonna make him an offer he can't refuse.",
-              date: Time.utc(1972), 
+              date: Time.utc(1972),
               attribution: "Vito Corleone",
               medium: Film.new(title: "The Godfather")
              )
 q.categories << film
 
 q = Quote.create!(content: "You don't understand! I coulda had class. I coulda been a contender. I could've been somebody, instead of a bum, which is what I am.",
-              date: Time.utc(1954), 
+              date: Time.utc(1954),
               attribution: "Terry Malloy",
               medium: Film.new(title: "On the Waterfront")
              )
@@ -139,3 +142,63 @@ q = Quote.create!(content: "Mama always said life was like a box of chocolates. 
               medium: Film.new(title: "Forrest Gump")
              )
 q.categories << film
+
+q = Quote.create!(content: "The best thing to hold on to in life is each other.",
+              date: Time.utc(1952),
+              attribution: "Audrey Hepburn"
+             )
+q.categories << love
+
+q = Quote.create!(content: "Love is composed of a single soul inhabiting two bodies.",
+              date: Time.utc(385),
+              attribution: "Aristotle"
+             )
+q.categories << love
+
+q = Quote.create!(content: "Where there is love there is life.",
+              date: Time.utc(1938),
+              attribution: "Mahatma Gandhi"
+             )
+q.categories << love
+
+q = Quote.create!(content: "Sometimes the heart sees what is invisible to the eye.",
+              date: Time.utc(1970),
+              attribution: "H. Jackson Brown Jr."
+             )
+q.categories << love
+
+q = Quote.create!(content: "Keep love in your heart. A life without it is like a sunless garden when the flowers are dead.",
+              date: Time.utc(1890),
+              attribution: "Oscar Wilde"
+             )
+q.categories << love
+
+q = Quote.create!(content: "God created war so that Americans would learn geography.",
+              date: Time.utc(1850),
+              attribution: "Mark Twain"
+             )
+q.categories << war
+
+q = Quote.create!(content: "War is peace. Freedom is slavery. Ignorance is strength.",
+              date: Time.utc(1949),
+              attribution: "George Orwell"
+             )
+q.categories << war
+
+q = Quote.create!(content: "I know not with what weapons World War III will be fought, but World War IV will be fought with sticks and stones.",
+              date: Time.utc(1957),
+              attribution: "Albert Einstein"
+             )
+q.categories << war
+
+q = Quote.create!(content: "Never was so much owed by so many to so few.",
+              date: Time.utc(1940),
+              attribution: "Winston Churchill"
+             )
+q.categories << war
+
+q = Quote.create!(content: "The object of war is not to die for your country but to make the other bastard die for his.",
+              date: Time.utc(1943),
+              attribution: "George Patton"
+             )
+q.categories << war
